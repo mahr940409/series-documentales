@@ -1,65 +1,94 @@
-{
-    "SeriesDocumentales": [
+[
+  {
+    "nombre": "Serie 1",
+    "subseries": [
       {
-        "nombre": "Serie 1",
-        "subseries": [
-          {
-            "nombre": "Subserie 1.1",
-            "tipologias": ["Tipología A", "Tipología B", "Tipología C"],
-            "procedimientos": ["Procedimiento 1", "Procedimiento 2", "Procedimiento 3"]
-          },
-          {
-            "nombre": "Subserie 1.2",
-            "tipologias": ["Tipología D", "Tipología E", "Tipología F"],
-            "procedimientos": ["Procedimiento 4", "Procedimiento 5", "Procedimiento 6"]
-          }
+        "nombre": "Subserie 1.1",
+        "tipologias": ["Tipología A", "Tipología B", "Tipología C"],
+        "procedimientos": [
+          "Procedimiento 1",
+          "Procedimiento 2",
+          "Procedimiento 3"
         ]
       },
       {
-        "nombre": "Serie 2",
-        "subseries": [
-          {
-            "nombre": "Subserie 2.1",
-            "tipologias": ["Tipología X", "Tipología Y", "Tipología Z"],
-            "procedimientos": ["Procedimiento 7", "Procedimiento 8", "Procedimiento 9"]
-          },
-          {
-            "nombre": "Subserie 2.2",
-            "tipologias": ["Tipología M", "Tipología N", "Tipología O"],
-            "procedimientos": ["Procedimiento 10", "Procedimiento 11", "Procedimiento 12"]
-          }
+        "nombre": "Subserie 1.2",
+        "tipologias": ["Tipología D", "Tipología E", "Tipología F"],
+        "procedimientos": [
+          "Procedimiento 4",
+          "Procedimiento 5",
+          "Procedimiento 6"
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Serie 2",
+    "subseries": [
+      {
+        "nombre": "Subserie 2.1",
+        "tipologias": ["Tipología X", "Tipología Y", "Tipología Z"],
+        "procedimientos": [
+          "Procedimiento 7",
+          "Procedimiento 8",
+          "Procedimiento 9"
         ]
       },
       {
-        "nombre": "Serie 3",
-        "subseries": [
-          {
-            "nombre": "Subserie 3.1",
-            "tipologias": ["Tipología A", "Tipología B", "Tipología C"],
-            "procedimientos": ["Procedimiento 1", "Procedimiento 2", "Procedimiento 3"]
-          },
-          {
-            "nombre": "Subserie 3.2",
-            "tipologias": ["Tipología D", "Tipología E", "Tipología F"],
-            "procedimientos": ["Procedimiento 4", "Procedimiento 5", "Procedimiento 6"]
-          }
+        "nombre": "Subserie 2.2",
+        "tipologias": ["Tipología M", "Tipología N", "Tipología O"],
+        "procedimientos": [
+          "Procedimiento 10",
+          "Procedimiento 11",
+          "Procedimiento 12"
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Serie 3",
+    "subseries": [
+      {
+        "nombre": "Subserie 3.1",
+        "tipologias": ["Tipología A", "Tipología B", "Tipología C"],
+        "procedimientos": [
+          "Procedimiento 1",
+          "Procedimiento 2",
+          "Procedimiento 3"
         ]
       },
       {
-        "nombre": "Serie 4",
-        "subseries": [
-          {
-            "nombre": "Subserie 4.1",
-            "tipologias": ["Tipología A", "Tipología B", "Tipología C"],
-            "procedimientos": ["Procedimiento 1", "Procedimiento 2", "Procedimiento 3"]
-          },
-          {
-            "nombre": "Subserie 4.2",
-            "tipologias": ["Tipología D", "Tipología E", "Tipología F"],
-            "procedimientos": ["Procedimiento 4", "Procedimiento 5", "Procedimiento 6"]
-          }
+        "nombre": "Subserie 3.2",
+        "tipologias": ["Tipología D", "Tipología E", "Tipología F"],
+        "procedimientos": [
+          "Procedimiento 4",
+          "Procedimiento 5",
+          "Procedimiento 6"
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Serie 4",
+    "subseries": [
+      {
+        "nombre": "Subserie 4.1",
+        "tipologias": ["Tipología A", "Tipología B", "Tipología C"],
+        "procedimientos": [
+          "Procedimiento 1",
+          "Procedimiento 2",
+          "Procedimiento 3"
+        ]
+      },
+      {
+        "nombre": "Subserie 4.2",
+        "tipologias": ["Tipología D", "Tipología E", "Tipología F"],
+        "procedimientos": [
+          "Procedimiento 4",
+          "Procedimiento 5",
+          "Procedimiento 6"
         ]
       }
     ]
   }
-  
+]

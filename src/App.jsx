@@ -1,55 +1,52 @@
-import React, { useState } from 'react';
-import SearchBar from './components/SearchBar';
-import SerieList from './components/SerieList';
-import SubserieList from './components/SubserieList';
-import seriesDocumentales from './components/seriesDocumentales.json';
+
+import { useState } from "react";
+import { useRef } from "react";
+import series from './components/seriesDocumentales.json'
+import Subseries from "./components/Subseries";
 
 const App = () => {
-  const [searchText, setSearchText] = useState('');
-  const [selectedSerie, setSelectedSerie] = useState(null);
-  const [selectedSubserie, setSelectedSubserie] = useState(null);
+  
+ const [inputValor, setInputValor] = useState() 
+ const [serieS, setSerieS] = useState(0)
+ 
 
-  const handleSearch = () => {
-    // Esta función no necesita parámetros, ya que utiliza el estado interno searchText
-    setSelectedSerie(null);
-    setSelectedSubserie(null);
-  };
+ const inputSearch = useRef()
 
-  const handleSerieClick = (serie) => {
-    setSelectedSerie(serie);
-    setSelectedSubserie(null);
-  };
+ const recibeEvento = e => {
+    e.preventDefault()
+    setInputValor(inputSearch.current.value)
+    setSerieS(inputSearch.current.value-1)
+ }
 
-  const handleSubserieClick = (subserie) => {
-    setSelectedSubserie(subserie);
-  };
-
-  const filteredSeries = seriesDocumentales.SeriesDocumentales.filter(serie =>
-    serie.nombre.toLowerCase().includes(searchText.toLowerCase())
-  );
-
-  const filteredSubseries = selectedSerie ? selectedSerie.subseries : [];
+const serie1 = () => {
+  setSerieS(0)
+}
+const serie2 = () => {
+  setSerieS(1)
+}
+const serie3 = () => {
+  setSerieS(2)
+}
+const serie4 = () => {
+  setSerieS(3)
+}
 
   return (
     <div>
-      <h1>Buscador de Series</h1>
-      <SearchBar
-        searchText={searchText}
-        setSearchText={setSearchText}
-        handleSearch={handleSearch}
-      />
-      {/* Mostrar la lista de series */}
-      {!selectedSerie && <SerieList series={filteredSeries} handleSerieClick={handleSerieClick} />}
-      {/* Mostrar la lista de subseries */}
-      {selectedSerie && !selectedSubserie && <SubserieList subseries={filteredSubseries} handleSubserieClick={handleSubserieClick} />}
-      {/* Mostrar los detalles de la subserie seleccionada */}
-      {selectedSubserie && (
-        <div>
-          <h2>Subserie: {selectedSubserie.nombre}</h2>
-          <p>Tipologías Documentales: {selectedSubserie.tipologias.join(', ')}</p>
-          <p>Procedimientos: {selectedSubserie.procedimientos.join(', ')}</p>
-        </div>
-      )}
+      <h1>Series Documentales</h1>
+       <ul>
+          <li onClick = {serie1}>{series[0].nombre}</li>
+          <li onClick = {serie2}>{series[1].nombre}</li>
+          <li onClick = {serie3}>{series[2].nombre}</li>
+          <li onClick = {serie4}>{series[3].nombre}</li>
+        </ul>
+        <form onSubmit={recibeEvento} action="">
+            <input ref={inputSearch} type="text" />
+            <button>Presiona</button>
+        </form>
+           <Subseries series = {series}
+           serieSel = {serieS}
+           />  
     </div>
   );
 };
